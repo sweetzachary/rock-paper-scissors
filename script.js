@@ -47,3 +47,5 @@ function game() {
         console.log(`You lost!!!`)
     }
 }
+
+game()
