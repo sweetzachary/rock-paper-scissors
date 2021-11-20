@@ -1,7 +1,7 @@
 /*playing options*/
 const choice =['rock', 'paper', 'scissors']
 
-let win_table = [['tie', 'lose', 'win'],
+const win_table = [['tie', 'lose', 'win'],
                 ['win', 'tie', 'lose'],
                 ['lose', 'win','tie']]
 
@@ -11,6 +11,14 @@ function computerPlay() {
 }
 
 function gameRound(playerChoice, computerChoice) {
-    return win_table[playerChoice][computerChoice];
+    playerChoice = playerChoice.toLowerCase();
+    const playerChoiceNum = choice.indexOf(playerChoice);
+    const computerChoiceNum = choice.indexOf(computerChoice);
+    return win_table[playerChoiceNum][computerChoiceNum];
 }
+/*
+function game() {
+    for(let i = 1; i <= 5; i++) {
 
+    }
+}*/
